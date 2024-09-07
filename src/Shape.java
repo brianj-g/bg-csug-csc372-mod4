@@ -9,6 +9,9 @@
  * 
  */
 
+/**
+ * Shape abstract class to enforce surface area and volume methods
+ */
 public abstract class Shape {
 	public abstract double surface_area();
 	public abstract double volume();

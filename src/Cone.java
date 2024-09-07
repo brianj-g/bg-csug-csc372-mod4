@@ -9,6 +9,9 @@
  * 
  */
 
+/**
+ * Cone class
+ */
 public class Cone extends Shape {
 	
 	private double radius;

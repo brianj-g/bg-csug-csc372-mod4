@@ -10,7 +10,7 @@
  */
 
 /**
- * 
+ * Sphere class
  */
 public class Sphere extends Shape {
 	private double radius;
