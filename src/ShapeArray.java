@@ -6,7 +6,6 @@
  * Colorado State University Global
  * Dr. Vanessa Cooper
  * September 8, 2024
- * 
  */
 
 /**
