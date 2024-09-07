@@ -23,8 +23,12 @@ public class Cone extends Shape {
 	 * @param h sets height of the cone
 	 */
 	public Cone(double r, double h) {
-		radius = r;
-		height = h;
+		if((r > 0) && (h > 0)) {
+			radius = r;
+			height = h;
+		} else {
+			throw new IllegalArgumentException("Both radius and height must be positive");
+		}
 	}
 	
 	/**
@@ -44,6 +48,46 @@ public class Cone extends Shape {
 		double vol = (height * Math.PI * Math.pow(radius, 2.0)) / 3.0;
 		
 		return vol;
+	}
+	
+	/**
+	 * 
+	 * @return the radius
+	 */
+	public double getRadius() {
+		return radius;
+	}
+
+	/**
+	 * 
+	 * @param r sets the radius
+	 */
+	public void setRadius(double r) {
+		if (r > 0) {
+			radius = r;	
+		} else {
+			throw new IllegalArgumentException("Radius must be positive");
+		}
+	}
+
+	/**
+	 * 
+	 * @return the height
+	 */
+	public double getHeight() {
+		return height;
+	}
+
+	/**
+	 * 
+	 * @param h sets the height
+	 */
+	public void setHeight(double h) {
+		if (h > 0) {
+			height = h;	
+		} else {
+			throw new IllegalArgumentException("Height must be positive");
+		}
 	}
 	
 	/**

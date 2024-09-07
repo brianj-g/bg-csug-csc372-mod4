@@ -26,22 +26,6 @@ public class Sphere extends Shape {
 			throw new IllegalArgumentException("Radius must be positive");
 		}
 	}
-	
-	/**
-	 * 
-	 * @return the radius of the sphere
-	 */
-	public double getRadius() {
-		return radius;
-	}
-
-	/**
-	 * 
-	 * @param radius sets the radius of the sphere
-	 */
-	public void setRadius(double r) {
-		radius = r;
-	}
 
 	/**
 	 * 
@@ -60,6 +44,22 @@ public class Sphere extends Shape {
 		double vol = (4.0 / 3.0) * (Math.PI * Math.pow(radius, 3.0));
 		
 		return vol;
+	}
+	
+	/**
+	 * 
+	 * @return the radius of the sphere
+	 */
+	public double getRadius() {
+		return radius;
+	}
+
+	/**
+	 * 
+	 * @param radius sets the radius of the sphere
+	 */
+	public void setRadius(double r) {
+		radius = r;
 	}
 	
 	/**

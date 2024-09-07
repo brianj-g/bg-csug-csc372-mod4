@@ -23,8 +23,12 @@ public class Cylinder extends Shape {
 	 * @param h the height of the cylinder
 	 */
 	public Cylinder(double r, double h) {
-		radius = r;
-		height = h;
+		if((r > 0) && (h > 0)) {
+			radius = r;
+			height = h;
+		} else {
+			throw new IllegalArgumentException("Both radius and height must be positive");
+		}
 	}
 	
 	/**
@@ -45,6 +49,45 @@ public class Cylinder extends Shape {
 		return vol;
 	}
 	
+	/**
+	 * 
+	 * @return the radius
+	 */
+	public double getRadius() {
+		return radius;
+	}
+
+	/**
+	 * 
+	 * @param r sets the radius
+	 */
+	public void setRadius(double r) {
+		if (r > 0) {
+			radius = r;	
+		} else {
+			throw new IllegalArgumentException("Radius must be positive");
+		}
+	}
+
+	/**
+	 * 
+	 * @return the height
+	 */
+	public double getHeight() {
+		return height;
+	}
+
+	/**
+	 * 
+	 * @param h sets the height
+	 */
+	public void setHeight(double h) {
+		if (h > 0) {
+			height = h;	
+		} else {
+			throw new IllegalArgumentException("Height must be positive");
+		}
+	}
 
 	/**
 	 * Overrides the toString() method of the Object class to return a custom string for the object.
