@@ -26,8 +26,9 @@ public class ShapeArray {
 		// Instantiate an array with Shape objects as members
 		shapeArray = new Shape[] {testSphere, testCylinder, testCone};
 		
+		
 		for(int i = 0; i < shapeArray.length; i++) {
-			// Leverage the "toString()" override to print the surface area and volume
+			// Leverage the "toString()" override for the custom message set in each subclass
 			System.out.println(shapeArray[i]);
 		}
 	}
