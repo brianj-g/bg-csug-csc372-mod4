@@ -20,9 +20,29 @@ public class Sphere extends Shape {
 	 * @param r the radius of the sphere
 	 */
 	public Sphere(double r) {
-		radius = r;
+		if (r > 0) {
+			radius = r;	
+		} else {
+			throw new IllegalArgumentException("Radius must be positive");
+		}
 	}
 	
+	/**
+	 * 
+	 * @return the radius of the sphere
+	 */
+	public double getRadius() {
+		return radius;
+	}
+
+	/**
+	 * 
+	 * @param radius sets the radius of the sphere
+	 */
+	public void setRadius(double r) {
+		radius = r;
+	}
+
 	/**
 	 * 
 	 * @return the surface area of the sphere
